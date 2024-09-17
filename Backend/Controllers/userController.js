@@ -1,6 +1,6 @@
 import userModel from "../Models/userModel.js";
 import jwt from "jsonwebtoken";
-import bcrypt from "bcrypt";
+import bcryptjs from "bcryptjs";
 import validator from "validator";
 
 // Helper function to create a JWT token
@@ -16,7 +16,7 @@ const loginUser = async (req, res) => {
     if (!user) {
       return res.status(400).json({ success: false, message: "User does not exist" });
     }
-    const isMatch = await bcrypt.compare(password, user.password);
+    const isMatch = await bcryptjs.compare(password, user.password);
     if (!isMatch) {
       return res.status(400).json({ success: false, message: "Invalid email or password" });
     }
@@ -42,8 +42,8 @@ const registerUser = async (req, res) => {
     if (password.length < 8) {
       return res.json({ success: false, message: "Enter a strong password" });
     }
-    const salt = await bcrypt.genSalt(10);
-    const hashedPassword = await bcrypt.hash(password, salt);
+    const salt = await bcryptjs.genSalt(10);
+    const hashedPassword = await bcryptjs.hash(password, salt);
     const newUser = new userModel({
       name: name,
       email: email,
