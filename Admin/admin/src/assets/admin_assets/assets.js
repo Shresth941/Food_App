@@ -13,4 +13,5 @@ export const assets ={
     upload_area,
     parcel_icon
 }
+export const url = 'https://food-app-back-eh9z.onrender.com';
 
