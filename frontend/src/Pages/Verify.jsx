@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from 'react';
 import './verify.css';
 import { useNavigate, useSearchParams } from 'react-router-dom';
-import { Storecontext } from '../Context/Storecontext';
+import { Storecontext } from '../Context/storecontext';
 import axios from 'axios'; // Make sure axios is imported
 
 const Verify = () => {
