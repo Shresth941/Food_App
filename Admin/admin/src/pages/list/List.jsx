@@ -3,7 +3,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import { FaTrashAlt } from "react-icons/fa";
 import "./List.css";
-const url = "http://localhost:4000";
+const url = "https://food-app-back-eh9z.onrender.com";
 const List = () => {
   const [list, setList] = useState([]);
   const [error, setError] = useState(null);
