@@ -4,7 +4,7 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 import { assets } from '../../assets/admin_assets/assets';
 
-const url = 'http://localhost:4000';
+const url = 'https://food-app-back-eh9z.onrender.com';
 
 const Order = () => {
   const [orders, setOrders] = useState([]);
