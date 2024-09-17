@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import "./Cart.css";
-import { Storecontext } from "../../Context/Storecontext";
+import { Storecontext } from "../../Context/storecontext";
 import { MdDeleteForever } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 
